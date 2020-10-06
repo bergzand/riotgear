@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import riotgear.cli
+import riotgear.plugin
+
+if __name__ == "__main__":
+    parser = riotgear.cli.clidriver()
+    reg = riotgear.plugin.Registry(default_dirs=['plugins'])
+    reg.load_all()
+
+    args = parser.parse_partial()
+
+    extra = parser.parse()
+    print(extra)
+    parser.launch()
