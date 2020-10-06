@@ -45,4 +45,13 @@ can assume that the caller wants to use the functionality provided by the
 plugin. The plugin, at this point, may load any necessary python modules,
 including external modules.
 
+Persistent storage
+==================
+
+Persistent storage must adhere to the `XDG base directory specification`_. No
+dotfiles in home directories. Thes must be stored in ``XDG_CONFIG_DIRS`` and so
+on.
+
 .. _RIOT: https://github.com/RIOT-OS/RIOT
+
+.. _XDG base directory specification: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
